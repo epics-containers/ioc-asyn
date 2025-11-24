@@ -23,6 +23,7 @@ WORKDIR ${SOURCE_FOLDER}/ibek-support
 COPY ibek-support/_ansible _ansible
 ENV PATH=$PATH:${SOURCE_FOLDER}/ibek-support/_ansible
 
+
 COPY ibek-support/iocStats/ iocStats
 RUN ansible.sh iocStats
 
@@ -43,6 +44,10 @@ RUN ansible.sh calc
 
 COPY ibek-support/autosave/ autosave
 RUN ansible.sh autosave
+
+# get the ioc source and build it
+COPY ioc ${SOURCE_FOLDER}/ioc
+RUN ansible.sh ioc
 
 ##### runtime preparation stage ################################################
 FROM developer AS runtime_prep
