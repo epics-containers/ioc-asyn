@@ -26,8 +26,8 @@ ENV PATH=$PATH:${SOURCE_FOLDER}/ibek-support/_ansible
 COPY ibek-support/iocStats/ iocStats
 RUN ansible.sh iocStats
 
-COPY ibek-support/seq/ seq
-RUN ansible.sh seq
+COPY ibek-support/sequencer/ sequencer
+RUN ansible.sh sequencer
 
 COPY ibek-support/sscan/ sscan
 RUN ansible.sh sscan
