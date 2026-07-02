@@ -1,4 +1,13 @@
+<<<<<<< before updating
 ibek>=3.3.1
 # to install direct from github during development in a branch
 # git+https://github.com/epics-containers/ibek.git@branch-name
 stdio-socket>=1.2.0
+=======
+# pin versions of pvi or ibek if needed
+pvi
+ibek
+# to install direct from github during development in a branch
+# git+https://github.com/epics-containers/ibek.git@fix-extract-assets
+stdio-socket>=1.4.0
+>>>>>>> after updating
