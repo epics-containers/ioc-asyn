@@ -70,7 +70,7 @@ jobs:
 
       - name: Developer target metadata
         id: meta-developer
-        uses: docker/metadata-action@v3
+        uses: docker/metadata-action@v6
         with:
           images: |
             ghcr.io/${{ github.repository_owner }}/${{ github.event.repository.name }}${{ matrix.extension }}-developer
@@ -93,7 +93,7 @@ jobs:
 
       - name: Runtime target metadata
         id: meta-runtime
-        uses: docker/metadata-action@v3
+        uses: docker/metadata-action@v6
         with:
           images: |
             ghcr.io/${{ github.repository_owner }}/${{ github.event.repository.name }}${{ matrix.extension }}-runtime
